@@ -1,0 +1,23 @@
+
+{% extends 'app/base.html' %}
+<html lang="en">
+
+    <!-- Latest compiled and minified CSS -->
+    {% block title %} 블로그 {% endblock title %}
+
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="text-center col-sm-12">
+                {% for data in datas %}
+                <h1>{{ data.title }}</h1>
+                <p>{{ data.author }}</p>
+                <p>{{ data.text|linebreaks }}</p>
+                <p>{{ data.created_at|timesince }} 전</p>
+                {% endfor %}
+            </div>
+         </div>
+    </div>
+    {% endblock content %}
+

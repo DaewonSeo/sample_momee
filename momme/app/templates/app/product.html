@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>상품판매</title>
+</head>
+<body>
+   {% for item in items %}
+   <h1>{{ item.name }}</h1>
+   <img src="{{ item.photo.url }}" alt="" width="30%" height="30%">
+   <p>{{ item.price }} 원</p>
+   <p>{{ item.description |linebreaks }}</p>
+   {% endfor %}
+</body>
+</html>

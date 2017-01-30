@@ -1,0 +1,45 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Home
+
+
+{% endblock title %}
+
+{% block content %}
+
+<div class="jumbotron">
+      <div class="container">
+        <h1>안녕하세요</h1>
+        <p> 국내에서 재배한 농산물을 직접 판매하고 있습니다. 많은 이용 부탁드릴게요</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>이용 방법</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">글 보러가기 &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2><small>상품판매</small> {{ item.name }} </h2>
+            <p>{{ item.description | truncatechars:150 }}</p>
+          <p><a class="btn btn-default" href="#" role="button">상품 보러가기 &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2><small>블로그</small> {{ blog.title | truncatechars:12}} </h2>
+          <p> {{ blog.text | truncatechars:100 }}</p>
+          <p><a class="btn btn-default" href="#" role="button">글 보러가기 &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+{% endblock content %}
